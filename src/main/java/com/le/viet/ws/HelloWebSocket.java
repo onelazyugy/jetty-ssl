@@ -19,7 +19,7 @@ public class HelloWebSocket {
 
     @OnWebSocketError
     public void onError(Throwable t) {
-        System.out.println("Error: " + t.getMessage());
+        System.out.println("On Error: " + t.getMessage());
     }
 
     @OnWebSocketConnect
@@ -34,7 +34,7 @@ public class HelloWebSocket {
 
     @OnWebSocketMessage
     public void onMessage(String message) {
-        System.out.println("Message: " + message);
+        System.out.println("On Message: " + message);
     }
 }
 

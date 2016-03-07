@@ -2,17 +2,12 @@ package com.le.viet;
 
 import com.le.viet.servlet.ConnectWSServlet;
 import com.le.viet.servlet.SSLServlet;
-import com.le.viet.ws.HelloWebSocket;
 import org.eclipse.jetty.server.*;
-import org.eclipse.jetty.server.handler.ContextHandler;
 import org.eclipse.jetty.server.handler.ContextHandlerCollection;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
 import org.eclipse.jetty.webapp.WebAppContext;
-import org.eclipse.jetty.websocket.server.WebSocketHandler;
-import org.eclipse.jetty.websocket.servlet.WebSocketServlet;
-import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.net.URL;
@@ -51,6 +46,7 @@ public class Application{
         https.addCustomizer(new SecureRequestCustomizer());
         SslContextFactory sslContextFactory = new SslContextFactory();
         sslContextFactory.setKeyStorePath(Application.class.getResource("/keystore.jks").toExternalForm());
+        //sslContextFactory.setKeyStorePath(Application.class.getResource("/keystore_work_ok.jks").toExternalForm());
 
         sslContextFactory.setKeyStorePassword("123456");
         sslContextFactory.setKeyManagerPassword("123456");
