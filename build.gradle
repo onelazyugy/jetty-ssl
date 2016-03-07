@@ -41,6 +41,8 @@ dependencies {
     compile("org.eclipse.jetty:jetty-http:9.0.5.v20130815")
     compile("org.eclipse.jetty:jetty-io:9.0.5.v20130815")
     compile("org.eclipse.jetty:jetty-proxy:9.0.5.v20130815")
+
+    compile("org.eclipse.jetty:jetty-distribution:9.0.5.v20130815")
     testCompile("junit:junit")
 }
 

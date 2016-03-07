@@ -23,6 +23,6 @@ public class SSLServlet extends HttpServlet {
 
         // Actual logic goes here.
         PrintWriter out = response.getWriter();
-        out.println("<h1>Hello Universe</h1>");
+        out.println("<h1>Hello Servlet</h1>");
     }
 }
